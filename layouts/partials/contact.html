@@ -28,7 +28,7 @@
 			<ul class="labeled-icons">
 				{{ if isset .Site.Params.contact "address" }}
 				<li>
-					<h3 class="icon fa-home"><span class="label"></span></h3>
+					<h3 class="fa fa-home"><span class="label"></span></h3>
 					{{ if isset .Site.Params.contact "gmaps_address" }}
 					<a href="https://maps.google.com/?q={{ .Site.Params.contact.gmaps_address}}">
 					{{ end }}
@@ -42,20 +42,26 @@
 				{{ end }}
 				{{ if isset .Site.Params.contact "phone" }}
 				<li>
-					<h3 class="icon fa-mobile"><span class="label"></span></h3>
+					<h3 class="fa fa-mobile"><span class="label"></span></h3>
 					<a href="tel:{{ .Site.Params.contact.phone | replaceRE "[\\s-]" "$1" }}">{{ .Site.Params.contact.phone }}</a>
 				</li>
 				{{ end }}
 				{{ if isset .Site.Params.contact "jabber" }}
 				<li>
-					<h3 class="icon fa fa-mobile"><span class="label"></span></h3>
+					<h3 class="fa fa-mobile"><span class="label"></span></h3>
 					<a href="#">{{ .Site.Params.contact.jabber }}</a>
 				</li>
 				{{ end }}
 				{{ if isset .Site.Params.contact "email" }}
 				<li>
-					<h3 class="icon fa-envelope-o"><span class="label"></span></h3>
+					<h3 class="fa fa-envelope-o"><span class="label"></span></h3>
 					<a href="mailto:{{ .Site.Params.contact.email }}">{{ .Site.Params.contact.email }}</a>
+				</li>
+				{{ end }}
+				{{ if isset .Site.Params.contact "telegram" }}
+				<li>
+					<h3 class="fa fa-telegram"><span class="label"></span></h3>
+					<a href="//t.me/{{ .Site.Params.contact.telegram }}">Telegram</a>
 				</li>
 				{{ end }}
 			</ul>
