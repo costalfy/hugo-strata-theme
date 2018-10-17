@@ -1,13 +1,26 @@
 {{ define "main" }}
-	<span>
-		<h1>{{ .Title }}</h1>
+<span>
+	<h1>{{ .Title }}</h1>
 
-		{{ partial "post-meta" . }}
-	</span>
+	{{ partial "post-meta" . }}
+</span>
 
-	<p>
-	    {{ .Content }}
-	</p>
+<p>
+	{{ .Content }}
+</p>
+<div class="grid" data-isotope='{ "itemSelector": ".grid-item", "percentPosition":true, "layoutMode": "fitRows","masonry": {"columnWidth": ".grid-sizer"} }'>
+	<div class="grid-sizer"></div>
+	<div class="grid-item grid-item--width2"><img src="/images/thumbs/06.jpg" /></div>
+	<div class="grid-item grid-item--width2"><img src="/images/thumbs/05.jpg" /></div>
+	<div class="grid-item grid-item--width2"><img src="/images/thumbs/04.jpg" /></div>
+	<div class="grid-item grid-item--width2"><img src="/images/thumbs/06.jpg" /></div>
+	<div class="grid-item grid-item--width2"><img src="/images/thumbs/05.jpg" /></div>
+	<div class="grid-item grid-item"><img src="/images/thumbs/04.jpg" /></div>
+	<div class="grid-item grid-item"><img src="/images/thumbs/06.jpg" /></div>
+	<div class="grid-item grid-item"><img src="/images/thumbs/05.jpg" /></div>
+	<div class="grid-item grid-item"><img src="/images/thumbs/04.jpg" /></div>
 
-	{{ template "_internal/disqus.html" . }}
+
+</div>
+{{ template "_internal/disqus.html" . }}
 {{ end }}
