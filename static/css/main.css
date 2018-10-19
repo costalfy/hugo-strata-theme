@@ -3155,3 +3155,9 @@
 	 font-size: 20px;
 	 line-height: 36px;
  }
+
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item { width: 32%; }
+/* 2 columns */
+.grid-item--width2 { width: 48%; }
