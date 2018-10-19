@@ -1,3 +1,4 @@
+/* Load isotope grid */
 $( document ).ready(function() {
     var $grid = $('.grid').imagesLoaded( function() {
         $grid.isotope({
