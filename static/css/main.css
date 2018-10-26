@@ -2486,7 +2486,7 @@
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(255, 255, 255, 0.65);
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
@@ -2513,11 +2513,11 @@
 		}
 
 			#footer .icons a {
-				color: rgba(255, 255, 255, 0.4);
+				color: rgba(255, 255, 255, 0.75);
 			}
 
 		#footer .copyright {
-			color: rgba(255, 255, 255, 0.4);
+			color: rgba(255, 255, 255, 0.6);
 			font-size: 0.8em;
 			list-style: none;
 			margin: 1em 0 0 0;
@@ -3155,3 +3155,20 @@
 	 font-size: 20px;
 	 line-height: 36px;
  }
+ /*
+ * https://flickity.metafizzy.co/
+ */
+ .carousel-image {
+	display: block;
+	height: 400px;
+	min-width: 150px;
+	max-width: 100%;
+	margin-right: 10px;
+	top: 50%;
+	transform: translateY(-50%)
+  }
+ 
+  .carousel.is-fullscreen .carousel-image {
+	height: auto;
+	max-height: 100%;
+  }

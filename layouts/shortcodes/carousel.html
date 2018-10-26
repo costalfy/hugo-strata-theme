@@ -1,0 +1,18 @@
+{{ $baseURL := .Site.BaseURL }}
+<div class="carousel" data-flickity='{ "cellAlign": "center", "contain": true,"fullscreen": true, "lazyLoad": 2 }'>
+    {{- with (.Get "dir") -}}
+    <!-- If a directory was specified, generate figures for all of the images in the directory -->
+		{{- $files := readDir (print "/static/" .) }}
+        {{- range $files -}}
+            {{- $isimg := lower .Name | findRE "\\.(gif|jpg|jpeg|tiff|png|bmp)" }}<!-- is the current file an image? -->
+                {{- if and $isimg }}
+                {{- $caption :=  .Name | replaceRE "\\..*" "" | humanize }}<!-- humanized filename without extension -->
+                {{- $linkURL := print $baseURL ($.Get "dir") "/" .Name | absURL }}<!-- absolute URL to hi-res image -->
+                <img class="carousel-image" data-flickity-lazyload="{{ $linkURL }}"  alt="{{ $caption }}"/>
+            {{- end }}
+        {{- end }}   
+        {{- else -}}
+		<!-- If no directory was specified, include any figure shortcodes called within the gallery -->
+	  {{ .Inner }}
+	{{- end }} 
+  </div>

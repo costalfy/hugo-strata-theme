@@ -1,13 +1,13 @@
 {{ define "main" }}
-	<span>
-		<h1>{{ .Title }}</h1>
+<span>
+	<h1>{{ .Title }}</h1>
 
-		{{ partial "post-meta" . }}
-	</span>
+	{{ partial "post-meta" . }}
+</span>
 
-	<p>
-	    {{ .Content }}
-	</p>
+<p>
+	{{ .Content }}
+</p>  
 
-	{{ template "_internal/disqus.html" . }}
+{{ template "_internal/disqus.html" . }}
 {{ end }}
