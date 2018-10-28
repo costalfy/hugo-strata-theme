@@ -1,5 +1,5 @@
 {{ $baseURL := .Site.BaseURL }}
-<div class="carousel" data-flickity='{ "cellAlign": "center", "contain": true,"fullscreen": true, "lazyLoad": 2 }'>
+<div class="carousel" data-flickity='{ "cellAlign": "center", "contain": true,"fullscreen": true, "lazyLoad": 6 }'>
     {{- with (.Get "dir") -}}
     <!-- If a directory was specified, generate figures for all of the images in the directory -->
 		{{- $files := readDir (print "/static/" .) }}

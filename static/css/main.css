@@ -3142,7 +3142,7 @@
 
 	#sidebar ul li a,
 	#sidebar ul li a a:visited {
-		color: #a2a2a2;
+		color: #dddddd;
 		text-decoration: none;
 	}
 
@@ -3160,7 +3160,7 @@
  */
  .carousel-image {
 	display: block;
-	height: 400px;
+	height: 200px;
 	min-width: 150px;
 	max-width: 100%;
 	margin-right: 10px;
