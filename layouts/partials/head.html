@@ -36,8 +36,9 @@
 		{{ end }}
 		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/flickity.min.css">
 		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/fullscreen.css">
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css">
 		{{ range .Site.Params.custom_css }}
 		<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
 		{{ end }}
-
+		
 	</head>
